@@ -1,4 +1,5 @@
 🇬🇧 Miniblog
+
 A modern full-stack blogging platform built with Next.js, featuring secure authentication, dynamic content management, and optimized user experience.
 
 🔥 Features
@@ -18,6 +19,7 @@ Database: PostgreSQL
 
 
 🇷🇺 Миниблог
+
 Современная full-stack платформа для блогинга на Next.js с защищенной авторизацией, управлением контентом и оптимизированным интерфейсом.
 
 🔥 Функционал
