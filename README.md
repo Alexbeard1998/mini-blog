@@ -1,61 +1,52 @@
-🇬🇧 Miniblog
+# Mini Blog
 
-A modern full-stack blogging platform built with Next.js, featuring secure authentication, dynamic content management, and optimized user experience.
+🔗 [Живое демо](https://mini-blog-alexbeard.vercel.app)
 
-🔥 Features
+Полноценная блог-платформа на Next.js 16 с авторизацией, загрузкой изображений и продвинутым UX.
 
-Dual Auth: Email/password and GitHub OAuth.
+![Главная страница](screenshots/home.png)
 
-User Profiles: Password updates and management.
+![Дашборд](screenshots/dashboard.png)
 
-Route Protection: Middleware-driven secure access.
+## 🔥 Возможности
 
-Full CRUD: Create, read, update, delete posts.
+- **Авторизация** — вход по Email/паролю и через GitHub OAuth
+- **Профиль** — установка и смена пароля
+- **Защита роутов** — middleware для неавторизованных
+- **Посты** — создание, редактирование, удаление, черновики
+- **Загрузка изображений** — обложки для постов
+- **Темы** — переключение светлой/тёмной темы (cookies)
+- **Поиск и пагинация** — серверная фильтрация и разбивка на страницы
+- **Streaming** — Suspense для мгновенной загрузки
+- **Адаптивный дизайн** — Tailwind CSS
 
-Media Uploads: Image hosting and processing.
+## 🛠️ Стек
 
-Dynamic Themes: Seamless light/dark mode toggle.
+- Next.js 16 (App Router)
+- TypeScript
+- Auth.js (NextAuth v5)
+- Prisma ORM + PostgreSQL
+- Tailwind CSS
+- React 19 (useOptimistic, useTransition)
 
-Optimized UX: Streaming responses with Suspense.
+## 🚀 Запуск
 
-Data Control: Server-side pagination and search.
+```bash
+git clone https://github.com/Alexbeard1998/mini-blog.git
+cd mini-blog
+npm install
+```
 
-🛠️ Tech
+Создай `.env`:
 
-StackFramework: 
+```
+DATABASE_URL="postgresql://..."
+AUTH_SECRET="секретный_ключ"
+AUTH_GITHUB_ID="..."
+AUTH_GITHUB_SECRET="..."
+```
 
-Next.js (App Router)Authentication: NextAuth.js / Auth.js
-
-Styling: Tailwind CSS + Shadcn UI
-
-Database: PostgreSQL
-
-
-🇷🇺 Миниблог
-
-Современная full-stack платформа для блогинга на Next.js с защищенной авторизацией, управлением контентом и оптимизированным интерфейсом.
-
-🔥 Функционал
-
-Гибридная авторизация: Вход по Email и через GitHub.
-
-Профили пользователей: Управление аккаунтом и смена пароля.
-
-Защита роутов: Middleware для блокировки неавторизованных сессий.
-
-Полный CRUD: Создание, чтение, обновление и удаление постов.
-
-Загрузка медиа: Работа с изображениями и хранилищем.
-
-Кастомные темы: Мгновенное переключение темная/светлая тема.
-
-Высокая скорость: Стриминг данных с помощью React Suspense.
-
-Навигация и поиск: Серверная пагинация и фильтрация постов.
-
-🛠️ Стек технологий
-Фреймворк: Next.js (App Router)Авторизация: NextAuth.js / Auth.js
-
-Стилизация: Tailwind CSS + Shadcn UI
-
-База данных: PostgreSQL (Prisma / Drizzle)
+```bash
+npx prisma migrate dev
+npm run dev
+```
